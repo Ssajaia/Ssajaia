@@ -33,7 +33,7 @@
 
 ### 💡 Fun Facts  
 - I love **customizing Linux Mint Cinnamon** 🎨  
-- I prefer using `namespace std;` in C++ 😆  
+- I never use `namespace std;` in C++ 😆  
 - I code daily and keep improving my skills! 📈  
 
 ### 📫 Let's Connect!  

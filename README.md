@@ -5,7 +5,6 @@
 - Currently mastering **C#** 🏆 and diving into **React & Next.js** 🚀  
 - Exploring **DevOps** and cloud technologies ☁️  
 - Skilled in **C++, C#, Java, JavaScript, Go, Kotlin, Python** 💡  
-- Hosting my website on **Render.com** 🌍  
 - Using **Linux Mint Cinnamon** as my daily driver 🖥️  
 
 ### 🛠️ Tech Stack  

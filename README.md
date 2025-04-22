@@ -5,7 +5,8 @@
 - Currently mastering **C#** 🏆 and diving into **React & Next.js** 🚀  
 - Exploring **DevOps** and cloud technologies ☁️  
 - Skilled in **C++, C#, Java, JavaScript, Go, Kotlin, Python** 💡  
-- Using **Linux Mint Cinnamon** as my daily driver 🖥️  
+- Using **Linux Mint Cinnamon** as my daily driver 🖥️
+- skilled in using **Kali Linux** as pentesting tool
 
 ### 🛠️ Tech Stack  
 💻 **Languages:**  

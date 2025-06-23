@@ -3,7 +3,7 @@
 ### 🧑‍💻 About Me  
 - **Passionate Programmer** 💙 | **Web Dev Enthusiast** 🌍 | **DevOps Learner** 🔧  
 - Currently mastering **C#** 🏆 and diving into **React & Next.js** 🚀  
-- Exploring **DevOps** and cloud technologies ☁️  
+- Explored **DevOps** and cloud technologies ☁️  
 - Skilled in **C++, C#, Java, JavaScript, Go, Kotlin, Python** 💡  
 - Using **Linux Mint Cinnamon** as my daily driver 🖥️
 - skilled in using **Kali Linux** as pentesting tool
@@ -21,6 +21,7 @@
 🛠 **Tools & Frameworks:**  
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)  
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)  
+![ASP.NET](https://img.shields.io/badge/C%23-239120?style=flat&logo=.net&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)  
 ![Linux Mint](https://img.shields.io/badge/Linux_Mint-87CF3E?style=flat&logo=linux-mint&logoColor=white)  
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)  

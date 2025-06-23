@@ -5,7 +5,7 @@
 - Currently mastering **C#** 🏆 and diving into **React & Next.js** 🚀  
 - Explored **DevOps** and cloud technologies ☁️  
 - Skilled in **C++, C#, Java, JavaScript, Go, Kotlin, Python** 💡  
-- Using **Linux Mint Cinnamon** as my daily driver 🖥️
+- skilled in using **Linux Mint ** as daily driver 🖥️
 - skilled in using **Kali Linux** as pentesting tool
 
 ### 🛠️ Tech Stack  
@@ -23,10 +23,9 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)  
 ![ASP.NET](https://img.shields.io/badge/%23-239120?style=flat&logo=.net&logoColor=white)  
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
-
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)  
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-
+![Nodejs](https://img.shields.io/badge/?style=flat&logo=nodejs&logoColor=white)
 
 ### 🎯 Projects & Learning Goals  
 - 🏗️ **Building a Typing Speed Tester** in **React**  

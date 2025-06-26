@@ -2,7 +2,7 @@
 
 ### 🧑‍💻 About Me  
 - **Passionate Programmer** 💙 | **Web Dev Enthusiast** 🌍 | **DevOps Learner** 🔧  
-- Currently mastering **C#** 🏆 and diving into **React & Next.js** 🚀  
+- Currently mastering **C#** 🏆 and diving into **C# & ASP.NET** 🚀  
 - Explored **DevOps** and cloud technologies ☁️  
 - Skilled in **C++, C#, Java, JavaScript, Go, Kotlin, Python** 💡  
 - skilled in using **Linux Mint ** as daily driver 🖥️

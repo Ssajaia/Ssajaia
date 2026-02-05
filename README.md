@@ -10,7 +10,7 @@ Advanced software engineer with expertise in systems programming, full-stack dev
 
 ### Programming Languages
 ```
-C++ • C# • Java • Go • Kotlin
+C++ • C • C# • Java • Go • Kotlin • Python • JavaScript/TypeScript
 ```
 
 ### Web Development
@@ -20,13 +20,46 @@ C++ • C# • Java • Go • Kotlin
 - ▲ Next.js
 - 🎨 Tailwind CSS
 
-**Backend**
+**Backend - JVM Ecosystem**
 - 🍃 Spring Boot (Gradle)
+
+**Backend - Node.js Ecosystem**
+- 🟢 Node.js
+- 🚂 Express
+- 🐱 NestJS
+
+**Backend - Python Ecosystem**
+- ⚡ FastAPI
+- 🎯 Django
+- 🔥 Flask
+
+**Backend - Go**
 - 🔷 Go
-- 🗄️ MS SQL
 
 **SAP Development**
 - Modern SAP frameworks and integration
+
+### Databases
+- 🗄️ MS SQL
+- 🐘 PostgreSQL
+- 🍃 MongoDB
+
+---
+
+## 🐧 Linux & Systems
+
+**Primary Expertise**
+- 🔵 Debian-based distributions
+
+**Additional Experience**
+- ⚫ Arch Linux
+- 🔒 Kali Linux
+- 🦜 Parrot OS
+
+**System Administration**
+- Shell scripting and automation
+- Package management
+- System configuration and optimization
 
 ---
 
@@ -36,11 +69,13 @@ C++ • C# • Java • Go • Kotlin
 - OWASP Top 10 implementation
 - Secure coding practices
 - Vulnerability assessment
+- Penetration testing methodologies
 
 **DevOps Fundamentals**
 - CI/CD pipeline management
 - Container orchestration
 - Infrastructure automation
+- Configuration management
 
 ---
 
@@ -51,22 +86,39 @@ C++ • C# • Java • Go • Kotlin
   - Shared memory management
   - Semaphore synchronization
   - Inter-process communication
+  - Process coordination
+
+- **Qt Framework**
+  - Cross-platform GUI development
+  - Event-driven architecture
+  - Signal-slot mechanism
+  - Custom widget creation
+
+### Algorithms & Data Structures
+- Advanced algorithm design and analysis
+- Complexity optimization (time/space)
+- Problem-solving strategies
+- Competitive programming techniques
+- Graph algorithms and dynamic programming
 
 ### Testing & Quality Assurance
 - **Pytest Framework**
   - Class-level testing
   - Function-level testing
   - Test automation strategies
+  - Fixture management and mocking
 
 ### Requirements Engineering
 - System requirements validation
 - Specification analysis
 - Compliance verification
+- Traceability matrix development
 
 ### Document Processing
 - PDF-to-structured-text conversion
 - Data extraction pipelines
 - Text parsing and normalization
+- Document automation workflows
 
 ---
 
@@ -76,7 +128,9 @@ C++ • C# • Java • Go • Kotlin
 |----------|------------|-------|
 | Build Tools | Gradle | Preferred over Maven for Spring Boot |
 | CSS Framework | Tailwind CSS | Direct utility-first approach |
-| Database | MS SQL | Primary relational database |
+| Relational DB | MS SQL / PostgreSQL | Situation-dependent |
+| NoSQL DB | MongoDB | Document-oriented storage |
+| Linux Distro | Debian-based | Primary development environment |
 | Code Organization | Multi-file structure | Clear separation of concerns |
 
 ---

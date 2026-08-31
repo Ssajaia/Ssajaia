@@ -21,6 +21,9 @@ C++ • C • C# • Java • Go • Kotlin • Python • JavaScript/TypeScript
 - ⚫ Arch Linux
 - 🔒 Kali Linux
 - 🦜 Parrot OS
+- 🔮 Gentoo
+- 🦎 OpenSUSE
+- 😎 Whonix
 
 **System Administration**
 - Shell scripting and automation

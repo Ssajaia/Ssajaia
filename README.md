@@ -2,7 +2,7 @@
 
 **Computer Science Student** | Tbilisi State University, Georgia
 
-Advanced software engineer with expertise in systems programming, full-stack development, and modern enterprise technologies.
+DevOps Engineer with expertise in systems programming, full-stack development, and modern enterprise technologies.
 
 ---
 
@@ -12,6 +12,43 @@ Advanced software engineer with expertise in systems programming, full-stack dev
 ```
 C++ • C • C# • Java • Go • Kotlin • Python • JavaScript/TypeScript
 ```
+## 🐧 Linux & Systems
+
+**Primary Expertise**
+- 🔵 Debian-based distributions
+
+**Additional Experience**
+- ⚫ Arch Linux
+- 🔒 Kali Linux
+- 🦜 Parrot OS
+
+**System Administration**
+- Shell scripting and automation
+- Package management
+- System configuration and optimization
+
+---
+
+## 🔒 Security & DevOps
+
+**Web Security**
+- OWASP Top 10 implementation
+- Secure coding practices
+- Vulnerability assessment
+- Penetration testing methodologies
+
+**DevOps**
+- Github actions
+- Gitlab CI
+- Jenkins
+- Terraform
+- AWS
+- GCP
+- AZURE
+- K8S
+- Docker
+
+---
 
 ### Web Development
 
@@ -46,38 +83,7 @@ C++ • C • C# • Java • Go • Kotlin • Python • JavaScript/TypeScript
 
 ---
 
-## 🐧 Linux & Systems
 
-**Primary Expertise**
-- 🔵 Debian-based distributions
-
-**Additional Experience**
-- ⚫ Arch Linux
-- 🔒 Kali Linux
-- 🦜 Parrot OS
-
-**System Administration**
-- Shell scripting and automation
-- Package management
-- System configuration and optimization
-
----
-
-## 🔒 Security & DevOps
-
-**Web Security**
-- OWASP Top 10 implementation
-- Secure coding practices
-- Vulnerability assessment
-- Penetration testing methodologies
-
-**DevOps Fundamentals**
-- CI/CD pipeline management
-- Container orchestration
-- Infrastructure automation
-- Configuration management
-
----
 
 ## 💡 Core Competencies
 

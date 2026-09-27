@@ -21,7 +21,7 @@ Tbilisi, Georgia
 
 <br/>
 
-I'm a Computer Science student at Tbilisi State University, currently working as a Junior DevOps Engineer at EPAM Systems. My focus is cloud infrastructure and automation - AWS, Terraform, and CI/CD - built on a background in backend and full-stack development, and a daily Fedora/Linux setup.
+I'm a Computer Science student at Tbilisi State University, currently working as a Junior DevOps Engineer at EPAM Systems. My focus is cloud infrastructure and automation — AWS, Terraform, and CI/CD — built on a background in backend and full-stack development, and a daily Fedora/Linux setup.
 
 <br/>
 
@@ -50,12 +50,12 @@ I'm a Computer Science student at Tbilisi State University, currently working as
 </td>
 <td valign="top" width="50%">
 
-**Languages - primary**
+**Languages — primary**
 <br/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
 
-**Languages - also used**
+**Languages — also used**
 <br/>
 <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" />
@@ -80,7 +80,7 @@ Currently deepening my knowledge of AWS (networking, IAM, compute, and HA design
 <td width="33%" valign="top">
 
 ### 🛰️ PHIctl
-**Bachelor's project** - team lead, 3 people
+**Bachelor's project** — team lead, 3 people
 
 Control and monitor a Kubernetes cluster from an Android phone. *PHI* (φ) = the mobile interface, *ctl* = the control plane.
 
@@ -91,12 +91,12 @@ Cluster-agnostic design, OIDC-based auth over static credentials, read-only/gues
 </td>
 <td width="33%" valign="top">
 
-### ☁️ Cloud Inventory API
-A cloud-backed inventory API bridging FastAPI with Azure and Cosmos DB data services.
+### ⚙️ Gaddy
+A minimal async HTTP server built from scratch in Rust — no frameworks, no middleware, just TCP sockets and bytes.
 
-`FastAPI` `PostgreSQL` `Azure` `Cosmos DB` `Docker` `JWT`
+`Rust` `Tokio` `TCP` `HTTP/1.1` `Async I/O`
 
-SQLAlchemy + Alembic for data, container-based deployment via Azure Container Registry, OpenAPI docs.
+Built incrementally by phase: raw TCP listener and responses, then request parsing and routing, then async connection handling with Tokio, hand-built HTTP/1.1 responses, and route matching with 404 handling. Focused on understanding what frameworks abstract away.
 
 </td>
 <td width="33%" valign="top">

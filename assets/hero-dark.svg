@@ -18,7 +18,7 @@ text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
 <text x="40" y="132" font-size="19" fill="#ffd166">Junior DevOps Engineer at EPAM Systems</text>
 <rect x="40" y="158" width="512" height="42" rx="8" fill="#21262d" stroke="#30363d"/>
 <text class="m" x="56" y="185" font-size="16" fill="#56d364">$</text>
-<text class="m" x="82" y="185" font-size="16" fill="#e6edf3">terraform apply -auto-approve   # nah, I'd win</text>
+<text class="m" x="82" y="185" font-size="16" fill="#e6edf3">terraform apply -auto-approve   # nah, I'd Apply</text>
 <rect class="cover" x="82" y="168" width="442" height="24" fill="#21262d" style="transform-origin:524px 180px;animation:type 3.4s steps(46) .8s forwards"/>
 <rect x="527" y="169" width="9" height="22" fill="#ffd166" style="animation:blink 1s step-end infinite"/>
 <line x1="636" y1="62" x2="748" y2="44" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>

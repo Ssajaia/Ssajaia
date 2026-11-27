@@ -24,22 +24,11 @@ Right now I'm going deeper on AWS (networking, IAM, compute, high availability) 
 
 Also worked with: FastAPI, Django, Flask, Spring Boot, Node.js, NestJS, React, Next.js, Tailwind CSS, Cosmos DB.
 
-### `$ git log --recent`
-
 <!-- PROJECTS:START -->
 <!-- PROJECTS:END -->
 
-### `$ snake --eat contributions`
+### `$ date  # Tbilisi, 50 seconds per day`
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/snake.svg">
-  <img alt="Contribution graph with a snake eating the squares" src="assets/snake.svg" width="100%">
-</picture>
+<img alt="Tbilisi sky cycling through night, dawn, day and dusk" src="assets/tbilisi.svg" width="100%">
 
-### `$ date  # Tbilisi`
-
-<img alt="Current sky over Tbilisi" src="assets/tbilisi.svg" width="100%">
-
-<sub>Automation over repetition. Infrastructure as code over manual config. Simplicity until complexity is justified.<br>
-This page rebuilds itself every 4 hours with Python and GitHub Actions, so the humans are optional.</sub>
+<sub>Automation over repetition. Infrastructure as code over manual config. Simplicity until complexity is justified.</sub>

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Builds every SVG on the profile and refreshes the recent-projects block.
 
+Run it by hand whenever you want fresh project cards, then commit the result:
+    python scripts/generate.py
+
 Standard library only. Environment:
     GH_USER        GitHub login (default: Ssajaia)
     GITHUB_TOKEN   optional, raises the API rate limit
@@ -39,7 +42,7 @@ LANG_COLORS = {
 }
 
 
-def wrap(w, h, title, body):
+def wrap(w, h, title, body, css=""):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(title)}">
 <title>{escape(title)}</title>
 <style>
@@ -49,6 +52,7 @@ text{{font-family:{SANS}}}
 @keyframes pulse{{0%,100%{{opacity:.2}}50%{{opacity:1}}}}
 @keyframes blink{{0%,49%{{opacity:1}}50%,100%{{opacity:0}}}}
 @keyframes type{{from{{transform:scaleX(1)}}to{{transform:scaleX(0)}}}}
+{css}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important}}.cover{{display:none}}}}
 </style>
 {body}
@@ -196,7 +200,8 @@ def update_projects(repos):
         for name, t in THEMES.items():
             (ASSETS / f"project-{i}-{name}.svg").write_text(card(repo, t), encoding="utf-8")
         cells.append(f'<a href="{repo["html_url"]}">{picture(f"project-{i}", repo["name"], "49%")}</a>')
-    block = '<p align="center">\n' + "\n".join(cells) + "\n</p>"
+    block = ("### `$ git log --recent`\n\n" + '<p align="center">\n'
+             + "\n".join(cells) + "\n</p>")
     readme = ROOT / "README.md"
     text = readme.read_text(encoding="utf-8")
     new = re.sub(r"(<!-- PROJECTS:START -->).*?(<!-- PROJECTS:END -->)",
@@ -205,69 +210,90 @@ def update_projects(repos):
 
 
 # ------------------------------------------------------------- scene
+CYCLE = 50  # seconds for one full day
+
+SKY = {"night": ("#050816", "#17204a"), "dawn": ("#3b3a7a", "#f6b26b"),
+       "day": ("#3d9be0", "#cfeeff"), "dusk": ("#3a2a66", "#f2874b")}
+RIDGE = {"night": ("#0d1430", "#070a1a"), "dawn": ("#51457f", "#2b2550"),
+         "day": ("#7396c0", "#4d6f99"), "dusk": ("#5f4380", "#30224a")}
+CAPTION = {"night": "Night shift. The servers sleep. I allegedly do too.",
+           "dawn": "Sunrise over the Caucasus. Coffee is deploying.",
+           "day": "Daytime. Pipelines are green. Allegedly.",
+           "dusk": "Golden hour. Strong deploy-freeze energy."}
+FADES = {  # opacity keyframes, percent of the cycle
+    "f-dawn": [(0, 0), (8, 0), (13, 1), (20, 1), (25, 0), (100, 0)],
+    "f-day": [(0, 0), (18, 0), (25, 1), (55, 1), (62, 0), (100, 0)],
+    "f-dusk": [(0, 0), (54, 0), (60, 1), (68, 1), (74, 0), (100, 0)],
+    "f-dark": [(0, 1), (10, 1), (20, 0), (62, 0), (72, 1), (100, 1)],
+    "f-sun": [(0, 0), (9, 0), (12, 1), (70, 1), (74, 0), (100, 0)],
+    "f-moon": [(0, 0), (70, 0), (74, 1), (97, 1), (100, 0)],
+    "c-night": [(0, 1), (8, 1), (11, 0), (72, 0), (75, 1), (100, 1)],
+    "c-dawn": [(0, 0), (9, 0), (12, 1), (20, 1), (23, 0), (100, 0)],
+    "c-day": [(0, 0), (21, 0), (24, 1), (56, 1), (59, 0), (100, 0)],
+    "c-dusk": [(0, 0), (57, 0), (60, 1), (72, 1), (75, 0), (100, 0)],
+}
+ARC = "M70 175 Q450 90 830 175"
+
+
 def scene():
-    now = datetime.now(timezone(timedelta(hours=4)))  # Tbilisi, no DST
-    h = now.hour + now.minute / 60
-    phase = "night" if (h < 5 or h >= 21) else "dawn" if h < 8 else "day" if h < 17 else "dusk"
-    sky = {"night": ("#050816", "#17204a"), "dawn": ("#3b3a7a", "#f6b26b"),
-           "day": ("#3d9be0", "#cfeeff"), "dusk": ("#3a2a66", "#f2874b")}[phase]
-    ridge = {"night": ("#0d1430", "#070a1a"), "dawn": ("#51457f", "#2b2550"),
-             "day": ("#7396c0", "#4d6f99"), "dusk": ("#5f4380", "#30224a")}[phase]
-    city = {"night": "#0a0f24", "dawn": "#2a2350", "day": "#3b5a82", "dusk": "#241a3d"}[phase]
-    caption = {"night": "Night shift. The servers sleep. I allegedly do too.",
-               "dawn": "Sunrise over the Caucasus. Coffee is deploying.",
-               "day": "Daytime. Pipelines are green. Allegedly.",
-               "dusk": "Golden hour. Strong deploy-freeze energy."}[phase]
-    ink = "#0f2a4a" if phase == "day" else "#eef3ff"
     W, H = 900, 220
-    p = [
-        f'<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">'
-        f'<stop offset="0" stop-color="{sky[0]}"/><stop offset="1" stop-color="{sky[1]}"/></linearGradient>'
-        f'<clipPath id="r"><rect width="{W}" height="{H}" rx="14"/></clipPath></defs>',
-        '<g clip-path="url(#r)">',
-        f'<rect width="{W}" height="{H}" fill="url(#sky)"/>',
-    ]
-    if phase != "day":
-        for i in range(44 if phase == "night" else 14):
-            p.append(f'<circle cx="{rnd(i)*880+10:.0f}" cy="{rnd(i+100)*110+8:.0f}" r="{0.8+rnd(i+200)*1.2:.1f}" '
-                     f'fill="#fff" style="animation:pulse {2+rnd(i+300)*3:.1f}s ease-in-out {rnd(i+400)*3:.1f}s infinite"/>')
-    if 6 <= h < 20:
-        pr = (h - 6) / 14
-        sx, sy = 70 + pr * 760, 175 - math.sin(math.pi * pr) * 55
-        col = "#ffd54a" if phase == "day" else "#ff9a3c"
-        p += [f'<circle cx="{sx:.0f}" cy="{sy:.0f}" r="38" fill="{col}" opacity=".25"/>',
-              f'<circle cx="{sx:.0f}" cy="{sy:.0f}" r="22" fill="{col}"/>']
-    else:
-        q = min(max(((h - 20) % 24) / 10, 0), 1)
-        mx, my = 70 + q * 760, 175 - math.sin(math.pi * q) * 55
-        p += [f'<mask id="mm"><rect x="{mx-30:.0f}" y="{my-30:.0f}" width="60" height="60" fill="#fff"/>'
-              f'<circle cx="{mx+8:.0f}" cy="{my-4:.0f}" r="16" fill="#000"/></mask>',
-              f'<circle cx="{mx:.0f}" cy="{my:.0f}" r="34" fill="#f4f1de" opacity=".08"/>',
-              f'<circle cx="{mx:.0f}" cy="{my:.0f}" r="18" fill="#f4f1de" mask="url(#mm)"/>']
-    p += [
-        f'<path d="M0 190 L90 130 L160 165 L260 100 L350 160 L450 120 L560 170 L680 105 L780 150 L860 125 L900 150 V220 H0Z" fill="{ridge[0]}"/>',
-        f'<path d="M0 205 L120 165 L220 195 L340 150 L470 200 L600 160 L730 200 L830 170 L900 195 V220 H0Z" fill="{ridge[1]}"/>',
-    ]
+    css = ""
+    for name, pts in FADES.items():
+        frames = "".join(f"{pc}%{{opacity:{v}}}" for pc, v in pts)
+        css += f"@keyframes {name}{{{frames}}}.{name}{{animation:{name} {CYCLE}s linear infinite}}"
+    p = ['<defs>']
+    for ph, (a, b) in SKY.items():
+        p.append(f'<linearGradient id="s-{ph}" x1="0" y1="0" x2="0" y2="1">'
+                 f'<stop offset="0" stop-color="{a}"/><stop offset="1" stop-color="{b}"/></linearGradient>')
+    p.append(f'<clipPath id="r"><rect width="{W}" height="{H}" rx="14"/></clipPath>'
+             '<mask id="mm"><rect x="-30" y="-30" width="60" height="60" fill="#fff"/>'
+             '<circle cx="8" cy="-4" r="16" fill="#000"/></mask></defs>')
+    p.append('<g clip-path="url(#r)">')
+    p.append(f'<rect width="{W}" height="{H}" fill="url(#s-night)"/>')
+    for ph in ("dawn", "day", "dusk"):
+        p.append(f'<rect class="f-{ph}" opacity="0" width="{W}" height="{H}" fill="url(#s-{ph})"/>')
+    stars = "".join(
+        f'<circle cx="{rnd(i)*880+10:.0f}" cy="{rnd(i+100)*110+8:.0f}" r="{0.8+rnd(i+200)*1.2:.1f}" fill="#fff" '
+        f'style="animation:pulse {2+rnd(i+300)*3:.1f}s ease-in-out {rnd(i+400)*3:.1f}s infinite"/>'
+        for i in range(44))
+    p.append(f'<g class="f-dark">{stars}</g>')
+    p.append(f'<g class="f-sun" opacity="0"><animateMotion dur="{CYCLE}s" repeatCount="indefinite" '
+             f'calcMode="linear" keyTimes="0;.1;.72;1" keyPoints="0;0;1;1" path="{ARC}"/>'
+             '<circle r="38" fill="#ffd54a" opacity=".25"/><circle r="22" fill="#ffd54a"/></g>')
+    p.append(f'<g class="f-moon" opacity="0"><animateMotion dur="{CYCLE}s" repeatCount="indefinite" '
+             f'calcMode="linear" keyTimes="0;.7;1" keyPoints="0;0;1" path="{ARC}"/>'
+             '<circle r="34" fill="#f4f1de" opacity=".08"/>'
+             '<circle r="18" fill="#f4f1de" mask="url(#mm)"/></g>')
+    for ph in ("night", "dawn", "day", "dusk"):
+        attrs = "" if ph == "night" else f' class="f-{ph}" opacity="0"'
+        a, b = RIDGE[ph]
+        p.append(f'<g{attrs}>'
+                 f'<path d="M0 190 L90 130 L160 165 L260 100 L350 160 L450 120 L560 170 L680 105 L780 150 L860 125 L900 150 V220 H0Z" fill="{a}"/>'
+                 f'<path d="M0 205 L120 165 L220 195 L340 150 L470 200 L600 160 L730 200 L830 170 L900 195 V220 H0Z" fill="{b}"/></g>')
+    buildings, windows = [], []
     x, i = 540, 0
     while x < 870:
         bw, bh = 16 + int(rnd(i + 300) * 14), 14 + int(rnd(i + 400) * 26)
         by = 218 - bh
-        p.append(f'<rect x="{x}" y="{by}" width="{bw}" height="{bh}" fill="{city}"/>')
-        if phase != "day":
-            for wy in range(by + 4, 214, 8):
-                for wx in (x + 3, x + bw - 6):
-                    if rnd(wx * 7 + wy) > 0.45:
-                        p.append(f'<rect x="{wx}" y="{wy}" width="3" height="3" fill="#ffd479" '
-                                 f'style="animation:pulse {3+rnd(wx+wy)*4:.1f}s ease-in-out {rnd(wy)*3:.1f}s infinite"/>')
+        buildings.append(f'<rect x="{x}" y="{by}" width="{bw}" height="{bh}" fill="#18213d"/>')
+        for wy in range(by + 4, 214, 8):
+            for wx in (x + 3, x + bw - 6):
+                if rnd(wx * 7 + wy) > 0.45:
+                    windows.append(f'<rect x="{wx}" y="{wy}" width="3" height="3" fill="#ffd479" '
+                                   f'style="animation:pulse {3+rnd(wx+wy)*4:.1f}s ease-in-out {rnd(wy)*3:.1f}s infinite"/>')
         x += bw + 3
         i += 1
-    p += [
-        f'<text x="36" y="50" font-size="14" fill="{ink}" opacity=".85">Tbilisi, Georgia (UTC+4)</text>',
-        f'<text x="36" y="82" font-size="21" font-weight="700" fill="{ink}">{escape(caption)}</text>',
-        '</g>',
-        f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{ink}" stroke-opacity=".25"/>',
-    ]
-    return wrap(W, H, f"Tbilisi sky, currently {phase}", "\n".join(p))
+    p.append("".join(buildings))
+    p.append(f'<g class="f-dark">{"".join(windows)}</g>')
+    for ph in ("night", "dawn", "day", "dusk"):
+        ink = "#0f2a4a" if ph == "day" else "#eef3ff"
+        attrs = "" if ph == "night" else ' opacity="0"'
+        p.append(f'<g class="c-{ph}"{attrs}>'
+                 f'<text x="36" y="50" font-size="14" fill="{ink}" opacity=".85">Tbilisi, Georgia (UTC+4)</text>'
+                 f'<text x="36" y="82" font-size="21" font-weight="700" fill="{ink}">{escape(CAPTION[ph])}</text></g>')
+    p.append('</g>')
+    p.append(f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="#fff" stroke-opacity=".25"/>')
+    return wrap(W, H, "Tbilisi sky cycling from night to dawn, day and dusk", "\n".join(p), css)
 
 
 def main():

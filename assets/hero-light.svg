@@ -7,6 +7,7 @@ text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
 @keyframes pulse{0%,100%{opacity:.2}50%{opacity:1}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes type{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.cover{display:none}}
 </style>
 <defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#b9cddb" stroke-width=".6" opacity=".7"/></pattern></defs>

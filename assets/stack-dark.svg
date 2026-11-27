@@ -7,6 +7,7 @@ text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
 @keyframes pulse{0%,100%{opacity:.2}50%{opacity:1}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes type{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.cover{display:none}}
 </style>
 <rect width="900" height="300" rx="14" fill="#0a2f4a"/>

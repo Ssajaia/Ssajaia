@@ -18,12 +18,10 @@ ASSETS = ROOT / "assets"
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 SANS = "'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif"
 
-# Colours follow GitHub: dark card = #161b22, light card = #f6f8fa.
+# Colours follow GitHub's dark theme.
 THEMES = {
     "dark": dict(bg="#161b22", panel="#21262d", line="#30363d", text="#e6edf3",
                  muted="#8b949e", accent="#ffd166", accent2="#58a6ff", ok="#56d364"),
-    "light": dict(bg="#f6f8fa", panel="#ffffff", line="#d0d7de", text="#1f2328",
-                  muted="#59636e", accent="#0969da", accent2="#bc4c00", ok="#1a7f37"),
 }
 
 LANG_COLORS = {
@@ -60,7 +58,7 @@ def rnd(seed):
 # --------------------------------------------------------------- hero
 def hero(t):
     W, H = 900, 250
-    cmd = "terraform apply -auto-approve   # nah, I'd win"
+    cmd = "terraform apply -auto-approve   # nah, I'd Apply"
     cw = 9.6
     tw = len(cmd) * cw
     x0 = 82
@@ -168,10 +166,10 @@ def card(repo, t):
 
 def main():
     ASSETS.mkdir(exist_ok=True)
-    for name, t in THEMES.items():
-        (ASSETS / f"hero-{name}.svg").write_text(hero(t), encoding="utf-8")
-        (ASSETS / f"stack-{name}.svg").write_text(stack(t), encoding="utf-8")
-    print("done: hero and stack assets")
+    t = THEMES["dark"]
+    (ASSETS / "hero-dark.svg").write_text(hero(t), encoding="utf-8")
+    (ASSETS / "stack-dark.svg").write_text(stack(t), encoding="utf-8")
+    print("done: dark hero and stack assets")
 
 
 if __name__ == "__main__":

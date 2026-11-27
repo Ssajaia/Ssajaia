@@ -10,7 +10,7 @@
   <a href="https://sabasajaia.vercel.app">sabasajaia.vercel.app</a>
 </p>
 
-Computer Science student at Tbilisi State University, Junior DevOps Engineer at EPAM Systems. I make infrastructure boring: Terraform instead of console clicking, pipelines instead of "works on my machine", and a Linux I will absolutely mention again.
+Computer Science student at Tbilisi State University, Junior DevOps Engineer at EPAM Systems. I make infrastructure boring: Terraform instead of console clicking, pipelines instead of "works on my machine", and a Linux I will absolutely mention again
 
 ### `$ ls stack/`
 

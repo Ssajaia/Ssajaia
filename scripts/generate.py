@@ -112,7 +112,7 @@ STACK = [
     ("provision", ["Terraform", "Ansible", "Docker", "Kubernetes"]),
     ("cloud", ["AWS", "Azure", "GCP"]),
     ("run", ["PostgreSQL", "DynamoDB", "MongoDB", "MS SQL Server"]),
-    ("OS", ["Arch","OpenBSD","FreeBSD","Fedora","Mint","Windows","MacOS"]),
+    ("OS", ["Arch","OpenBSD","FreeBSD","Fedora","Mint","Windows","MacOS"]), 
 ]
 
 

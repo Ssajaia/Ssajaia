@@ -1,25 +1,17 @@
 #!/usr/bin/env python3
-"""Builds every SVG on the profile and refreshes the recent-projects block.
+"""Builds the hero and stack SVG assets used by the profile README.
 
-Run it by hand whenever you want fresh project cards, then commit the result:
+Run it by hand to refresh those assets, then commit the result:
     python scripts/generate.py
 
-Standard library only. Environment:
-    GH_USER        GitHub login (default: Ssajaia)
-    GITHUB_TOKEN   optional, raises the API rate limit
+Standard library only.
 """
-import json
 import math
-import os
-import re
 import textwrap
-import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-USER = os.environ.get("GH_USER", "Ssajaia")
-TOKEN = os.environ.get("GITHUB_TOKEN")
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
 
@@ -117,16 +109,17 @@ STACK = [
 
 
 def stack(t):
-    W, H = 900, 300
+    # Keep every current category and item inside the viewBox.
+    W, H = 1080, 482
     p = [
         f'<rect width="{W}" height="{H}" rx="14" fill="{t["bg"]}"/>',
         f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{t["line"]}"/>',
-        f'<line x1="20" y1="54" x2="880" y2="54" stroke="{t["accent2"]}" stroke-opacity=".7" '
+        f'<line x1="20" y1="54" x2="1060" y2="54" stroke="{t["accent2"]}" stroke-opacity=".7" '
         f'stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.6s linear infinite"/>',
     ]
     for b in (0, 1.7, 3.4):
         p.append(f'<circle r="4.5" cy="0" fill="{t["accent"]}"><animateMotion dur="5.1s" begin="{b}s" '
-                 f'repeatCount="indefinite" path="M20 54 H880"/></circle>')
+                 f'repeatCount="indefinite" path="M20 54 H1060"/></circle>')
     for i, (head, items) in enumerate(STACK):
         x0 = 20 + i * 175
         p.append(f'<text x="{x0}" y="36" font-size="17" font-weight="700" fill="{t["accent"]}">{head}</text>')
@@ -136,7 +129,7 @@ def stack(t):
             p.append(f'<circle cx="{x0+16}" cy="{y+17}" r="4" fill="{t["ok"]}" '
                      f'style="animation:pulse 3s ease-in-out {(i*5+j)*0.2:.1f}s infinite"/>')
             p.append(f'<text x="{x0+30}" y="{y+22}" font-size="14" fill="{t["text"]}">{escape(item)}</text>')
-    return wrap(W, H, "Tech stack: write, ship, provision, cloud, run", "\n".join(p))
+    return wrap(W, H, "Tech stack: write, ship, provision, cloud, run, and operating systems", "\n".join(p))
 
 
 # ------------------------------------------------------------- cards
@@ -171,16 +164,14 @@ def card(repo, t):
         f'<text class="m" x="{W-20}" y="{H-16}" text-anchor="end" font-size="12" fill="{t["muted"]}">pushed {ago(repo["pushed_at"])}</text>',
     ]
     return wrap(W, H, f"Repository {repo['name']}", "\n".join(p))
+
+
 def main():
     ASSETS.mkdir(exist_ok=True)
     for name, t in THEMES.items():
         (ASSETS / f"hero-{name}.svg").write_text(hero(t), encoding="utf-8")
         (ASSETS / f"stack-{name}.svg").write_text(stack(t), encoding="utf-8")
-    (ASSETS / "tbilisi.svg").write_text(scene(), encoding="utf-8")
-    repos = recent_repos()
-    if repos:
-        update_projects(repos)
-    print(f"done: {len(repos)} project cards")
+    print("done: hero and stack assets")
 
 
 if __name__ == "__main__":

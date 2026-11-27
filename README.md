@@ -10,9 +10,7 @@
   <a href="https://sabasajaia.vercel.app">sabasajaia.vercel.app</a>
 </p>
 
-Computer Science student at Tbilisi State University, Junior DevOps Engineer at EPAM Systems. I make infrastructure boring: Terraform instead of console clicking, pipelines instead of "works on my machine", and a Fedora laptop I will absolutely mention again.
-
-Right now I'm going deeper on AWS (networking, IAM, compute, high availability) and Terraform (state, workspaces, the plan and apply loop), with Kubernetes and cloud security close behind.
+Computer Science student at Tbilisi State University, Junior DevOps Engineer at EPAM Systems. I make infrastructure boring: Terraform instead of console clicking, pipelines instead of "works on my machine", and a Linux I will absolutely mention again.
 
 ### `$ ls stack/`
 

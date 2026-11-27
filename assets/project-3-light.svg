@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="124" viewBox="0 0 440 124" role="img" aria-label="Repository log-seeker">
+<title>Repository log-seeker</title>
+<style>
+text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+@keyframes flow{to{stroke-dashoffset:-24}}
+@keyframes pulse{0%,100%{opacity:.2}50%{opacity:1}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes type{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.cover{display:none}}
+</style>
+<rect x=".5" y=".5" width="439" height="123" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="12" y="16" width="3" height="92" rx="1.5" fill="#00ADD8"/>
+<text x="28" y="35" font-size="18" font-weight="700" fill="#0969da">log-seeker</text>
+<text class="m" x="420" y="34" text-anchor="end" font-size="13" fill="#59636e">★ 0</text>
+<text x="28" y="62" font-size="13" fill="#1f2328">A lightweight, self-hosted log collection and</text>
+<text x="28" y="82" font-size="13" fill="#1f2328">analysis platform for centralized monitoring,…</text>
+<circle cx="32" cy="104" r="5" fill="#00ADD8"/>
+<text class="m" x="44" y="108" font-size="12" fill="#59636e">Go</text>
+<text class="m" x="420" y="108" text-anchor="end" font-size="12" fill="#59636e">pushed 10d ago</text>
+</svg>

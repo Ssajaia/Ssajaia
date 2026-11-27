@@ -26,12 +26,12 @@ ASSETS = ROOT / "assets"
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 SANS = "'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif"
 
-# Cyanotype blueprint (dark) and drafting paper (light).
+# Colours follow GitHub: dark card = #161b22, light card = #f6f8fa.
 THEMES = {
-    "dark": dict(bg="#0a2f4a", panel="#0e3b5c", line="#2d6288", text="#eaf4fb",
-                 muted="#9ec0d8", accent="#ffd166", accent2="#7dd3fc", ok="#6ee7b7"),
-    "light": dict(bg="#eef3f6", panel="#ffffff", line="#b9cddb", text="#0c2b40",
-                  muted="#4f6b80", accent="#0b5d8c", accent2="#b45309", ok="#0f766e"),
+    "dark": dict(bg="#161b22", panel="#21262d", line="#30363d", text="#e6edf3",
+                 muted="#8b949e", accent="#ffd166", accent2="#58a6ff", ok="#56d364"),
+    "light": dict(bg="#f6f8fa", panel="#ffffff", line="#d0d7de", text="#1f2328",
+                  muted="#59636e", accent="#0969da", accent2="#bc4c00", ok="#1a7f37"),
 }
 
 LANG_COLORS = {
@@ -88,10 +88,10 @@ def hero(t):
         f'<rect x="{x0+tw+3:.0f}" y="169" width="9" height="22" fill="{t["accent"]}" '
         f'style="animation:blink 1s step-end infinite"/>',
     ]
-    nodes = {"AWS": (640, 70), "VPC": (760, 48), "K8s": (842, 112),
-             "IAM": (722, 130), "CI": (664, 196), "TF": (800, 200)}
-    edges = [("AWS", "VPC"), ("VPC", "K8s"), ("AWS", "IAM"), ("IAM", "K8s"),
-             ("IAM", "CI"), ("IAM", "TF"), ("CI", "TF"), ("K8s", "TF")]
+    nodes = {"AWS": (636, 62), "GCP": (748, 44), "AZ": (846, 92), "K8s": (722, 124),
+             "CI": (664, 196), "TF": (790, 200), "ANS": (850, 158)}
+    edges = [("AWS", "GCP"), ("GCP", "AZ"), ("AWS", "K8s"), ("GCP", "K8s"), ("AZ", "K8s"),
+             ("K8s", "CI"), ("K8s", "TF"), ("CI", "TF"), ("TF", "ANS"), ("AZ", "ANS")]
     for a, b in edges:
         (x1, y1), (x2, y2) = nodes[a], nodes[b]
         p.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{t["accent2"]}" '
@@ -108,8 +108,9 @@ def hero(t):
 # -------------------------------------------------------------- stack
 STACK = [
     ("write", ["Python", "Go", "Rust", "C#", "TypeScript"]),
-    ("ship", ["GitHub Actions", "GitLab CI", "Jenkins", "Ansible", "Bash"]),
-    ("provision", ["Terraform", "AWS", "Docker", "Kubernetes", "Git"]),
+    ("ship", ["GitHub Actions", "GitLab CI", "Jenkins", "Bash", "Git"]),
+    ("provision", ["Terraform", "Ansible", "Docker", "Kubernetes"]),
+    ("cloud", ["AWS", "Azure", "GCP"]),
     ("run", ["Linux (Fedora)", "PostgreSQL", "DynamoDB", "MongoDB", "MS SQL Server"]),
 ]
 
@@ -119,22 +120,22 @@ def stack(t):
     p = [
         f'<rect width="{W}" height="{H}" rx="14" fill="{t["bg"]}"/>',
         f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{t["line"]}"/>',
-        f'<line x1="30" y1="54" x2="870" y2="54" stroke="{t["accent2"]}" stroke-opacity=".7" '
+        f'<line x1="20" y1="54" x2="880" y2="54" stroke="{t["accent2"]}" stroke-opacity=".7" '
         f'stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.6s linear infinite"/>',
     ]
     for b in (0, 1.7, 3.4):
         p.append(f'<circle r="4.5" cy="0" fill="{t["accent"]}"><animateMotion dur="5.1s" begin="{b}s" '
-                 f'repeatCount="indefinite" path="M30 54 H870"/></circle>')
+                 f'repeatCount="indefinite" path="M20 54 H880"/></circle>')
     for i, (head, items) in enumerate(STACK):
-        x0 = 30 + i * 220
+        x0 = 20 + i * 175
         p.append(f'<text x="{x0}" y="36" font-size="17" font-weight="700" fill="{t["accent"]}">{head}</text>')
         for j, item in enumerate(items):
             y = 76 + j * 44
-            p.append(f'<rect x="{x0}" y="{y}" width="200" height="34" rx="8" fill="{t["panel"]}" stroke="{t["line"]}"/>')
+            p.append(f'<rect x="{x0}" y="{y}" width="160" height="34" rx="8" fill="{t["panel"]}" stroke="{t["line"]}"/>')
             p.append(f'<circle cx="{x0+16}" cy="{y+17}" r="4" fill="{t["ok"]}" '
                      f'style="animation:pulse 3s ease-in-out {(i*5+j)*0.2:.1f}s infinite"/>')
             p.append(f'<text x="{x0+30}" y="{y+22}" font-size="14" fill="{t["text"]}">{escape(item)}</text>')
-    return wrap(W, H, "Tech stack: write, ship, provision, run", "\n".join(p))
+    return wrap(W, H, "Tech stack: write, ship, provision, cloud, run", "\n".join(p))
 
 
 # ------------------------------------------------------------- cards
@@ -212,9 +213,9 @@ def update_projects(repos):
 # ------------------------------------------------------------- scene
 CYCLE = 50  # seconds for one full day
 
-SKY = {"night": ("#050816", "#17204a"), "dawn": ("#3b3a7a", "#f6b26b"),
+SKY = {"night": ("#0d1117", "#1b2540"), "dawn": ("#3b3a7a", "#f6b26b"),
        "day": ("#3d9be0", "#cfeeff"), "dusk": ("#3a2a66", "#f2874b")}
-RIDGE = {"night": ("#0d1430", "#070a1a"), "dawn": ("#51457f", "#2b2550"),
+RIDGE = {"night": ("#141b2d", "#0d1117"), "dawn": ("#51457f", "#2b2550"),
          "day": ("#7396c0", "#4d6f99"), "dusk": ("#5f4380", "#30224a")}
 CAPTION = {"night": "Night shift. The servers sleep. I allegedly do too.",
            "dawn": "Sunrise over the Caucasus. Coffee is deploying.",

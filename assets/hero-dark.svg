@@ -10,41 +10,46 @@ text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.cover{display:none}}
 </style>
-<defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#2d6288" stroke-width=".6" opacity=".7"/></pattern></defs>
-<rect width="900" height="250" rx="14" fill="#0a2f4a"/>
+<defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#30363d" stroke-width=".6" opacity=".7"/></pattern></defs>
+<rect width="900" height="250" rx="14" fill="#161b22"/>
 <rect width="900" height="250" rx="14" fill="url(#g)"/>
-<rect x=".5" y=".5" width="899" height="249" rx="14" fill="none" stroke="#2d6288"/>
-<text x="40" y="96" font-size="48" font-weight="800" fill="#eaf4fb">Saba Sajaia</text>
+<rect x=".5" y=".5" width="899" height="249" rx="14" fill="none" stroke="#30363d"/>
+<text x="40" y="96" font-size="48" font-weight="800" fill="#e6edf3">Saba Sajaia</text>
 <text x="40" y="132" font-size="19" fill="#ffd166">Junior DevOps Engineer at EPAM Systems</text>
-<rect x="40" y="158" width="512" height="42" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<text class="m" x="56" y="185" font-size="16" fill="#6ee7b7">$</text>
-<text class="m" x="82" y="185" font-size="16" fill="#eaf4fb">terraform apply -auto-approve   # nah, I'd win</text>
-<rect class="cover" x="82" y="168" width="442" height="24" fill="#0e3b5c" style="transform-origin:524px 180px;animation:type 3.4s steps(46) .8s forwards"/>
+<rect x="40" y="158" width="512" height="42" rx="8" fill="#21262d" stroke="#30363d"/>
+<text class="m" x="56" y="185" font-size="16" fill="#56d364">$</text>
+<text class="m" x="82" y="185" font-size="16" fill="#e6edf3">terraform apply -auto-approve   # nah, I'd win</text>
+<rect class="cover" x="82" y="168" width="442" height="24" fill="#21262d" style="transform-origin:524px 180px;animation:type 3.4s steps(46) .8s forwards"/>
 <rect x="527" y="169" width="9" height="22" fill="#ffd166" style="animation:blink 1s step-end infinite"/>
-<line x1="640" y1="70" x2="760" y2="48" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="760" y1="48" x2="842" y2="112" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="640" y1="70" x2="722" y2="130" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="722" y1="130" x2="842" y2="112" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="722" y1="130" x2="664" y2="196" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="722" y1="130" x2="800" y2="200" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="664" y1="196" x2="800" y2="200" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<line x1="842" y1="112" x2="800" y2="200" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
-<circle cx="640" cy="70" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 0.00s infinite"/>
-<circle cx="640" cy="70" r="18" fill="#0e3b5c" stroke="#7dd3fc" stroke-width="1.5"/>
-<text class="m" x="640" y="74" text-anchor="middle" font-size="11" fill="#eaf4fb">AWS</text>
-<circle cx="760" cy="48" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 0.55s infinite"/>
-<circle cx="760" cy="48" r="18" fill="#0e3b5c" stroke="#7dd3fc" stroke-width="1.5"/>
-<text class="m" x="760" y="52" text-anchor="middle" font-size="11" fill="#eaf4fb">VPC</text>
-<circle cx="842" cy="112" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 1.10s infinite"/>
-<circle cx="842" cy="112" r="18" fill="#0e3b5c" stroke="#7dd3fc" stroke-width="1.5"/>
-<text class="m" x="842" y="116" text-anchor="middle" font-size="11" fill="#eaf4fb">K8s</text>
-<circle cx="722" cy="130" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 1.65s infinite"/>
-<circle cx="722" cy="130" r="18" fill="#0e3b5c" stroke="#7dd3fc" stroke-width="1.5"/>
-<text class="m" x="722" y="134" text-anchor="middle" font-size="11" fill="#eaf4fb">IAM</text>
+<line x1="636" y1="62" x2="748" y2="44" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="748" y1="44" x2="846" y2="92" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="636" y1="62" x2="722" y2="124" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="748" y1="44" x2="722" y2="124" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="846" y1="92" x2="722" y2="124" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="722" y1="124" x2="664" y2="196" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="722" y1="124" x2="790" y2="200" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="664" y1="196" x2="790" y2="200" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="790" y1="200" x2="850" y2="158" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<line x1="846" y1="92" x2="850" y2="158" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.4s linear infinite"/>
+<circle cx="636" cy="62" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 0.00s infinite"/>
+<circle cx="636" cy="62" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="636" y="66" text-anchor="middle" font-size="11" fill="#e6edf3">AWS</text>
+<circle cx="748" cy="44" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 0.55s infinite"/>
+<circle cx="748" cy="44" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="748" y="48" text-anchor="middle" font-size="11" fill="#e6edf3">GCP</text>
+<circle cx="846" cy="92" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 1.10s infinite"/>
+<circle cx="846" cy="92" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="846" y="96" text-anchor="middle" font-size="11" fill="#e6edf3">AZ</text>
+<circle cx="722" cy="124" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 1.65s infinite"/>
+<circle cx="722" cy="124" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="722" y="128" text-anchor="middle" font-size="11" fill="#e6edf3">K8s</text>
 <circle cx="664" cy="196" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 2.20s infinite"/>
-<circle cx="664" cy="196" r="18" fill="#0e3b5c" stroke="#7dd3fc" stroke-width="1.5"/>
-<text class="m" x="664" y="200" text-anchor="middle" font-size="11" fill="#eaf4fb">CI</text>
-<circle cx="800" cy="200" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 2.75s infinite"/>
-<circle cx="800" cy="200" r="18" fill="#0e3b5c" stroke="#7dd3fc" stroke-width="1.5"/>
-<text class="m" x="800" y="204" text-anchor="middle" font-size="11" fill="#eaf4fb">TF</text>
+<circle cx="664" cy="196" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="664" y="200" text-anchor="middle" font-size="11" fill="#e6edf3">CI</text>
+<circle cx="790" cy="200" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 2.75s infinite"/>
+<circle cx="790" cy="200" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="790" y="204" text-anchor="middle" font-size="11" fill="#e6edf3">TF</text>
+<circle cx="850" cy="158" r="26" fill="none" stroke="#ffd166" style="animation:pulse 3.2s ease-in-out 3.30s infinite"/>
+<circle cx="850" cy="158" r="18" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+<text class="m" x="850" y="162" text-anchor="middle" font-size="11" fill="#e6edf3">ANS</text>
 </svg>

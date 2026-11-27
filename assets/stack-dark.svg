@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Tech stack: write, ship, provision, run">
-<title>Tech stack: write, ship, provision, run</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Tech stack: write, ship, provision, cloud, run">
+<title>Tech stack: write, ship, provision, cloud, run</title>
 <style>
 text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
 .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
@@ -10,74 +10,81 @@ text{font-family:'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.cover{display:none}}
 </style>
-<rect width="900" height="300" rx="14" fill="#0a2f4a"/>
-<rect x=".5" y=".5" width="899" height="299" rx="14" fill="none" stroke="#2d6288"/>
-<line x1="30" y1="54" x2="870" y2="54" stroke="#7dd3fc" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.6s linear infinite"/>
-<circle r="4.5" cy="0" fill="#ffd166"><animateMotion dur="5.1s" begin="0s" repeatCount="indefinite" path="M30 54 H870"/></circle>
-<circle r="4.5" cy="0" fill="#ffd166"><animateMotion dur="5.1s" begin="1.7s" repeatCount="indefinite" path="M30 54 H870"/></circle>
-<circle r="4.5" cy="0" fill="#ffd166"><animateMotion dur="5.1s" begin="3.4s" repeatCount="indefinite" path="M30 54 H870"/></circle>
-<text x="30" y="36" font-size="17" font-weight="700" fill="#ffd166">write</text>
-<rect x="30" y="76" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="46" cy="93" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 0.0s infinite"/>
-<text x="60" y="98" font-size="14" fill="#eaf4fb">Python</text>
-<rect x="30" y="120" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="46" cy="137" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 0.2s infinite"/>
-<text x="60" y="142" font-size="14" fill="#eaf4fb">Go</text>
-<rect x="30" y="164" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="46" cy="181" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 0.4s infinite"/>
-<text x="60" y="186" font-size="14" fill="#eaf4fb">Rust</text>
-<rect x="30" y="208" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="46" cy="225" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 0.6s infinite"/>
-<text x="60" y="230" font-size="14" fill="#eaf4fb">C#</text>
-<rect x="30" y="252" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="46" cy="269" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 0.8s infinite"/>
-<text x="60" y="274" font-size="14" fill="#eaf4fb">TypeScript</text>
-<text x="250" y="36" font-size="17" font-weight="700" fill="#ffd166">ship</text>
-<rect x="250" y="76" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="266" cy="93" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 1.0s infinite"/>
-<text x="280" y="98" font-size="14" fill="#eaf4fb">GitHub Actions</text>
-<rect x="250" y="120" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="266" cy="137" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 1.2s infinite"/>
-<text x="280" y="142" font-size="14" fill="#eaf4fb">GitLab CI</text>
-<rect x="250" y="164" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="266" cy="181" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 1.4s infinite"/>
-<text x="280" y="186" font-size="14" fill="#eaf4fb">Jenkins</text>
-<rect x="250" y="208" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="266" cy="225" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 1.6s infinite"/>
-<text x="280" y="230" font-size="14" fill="#eaf4fb">Ansible</text>
-<rect x="250" y="252" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="266" cy="269" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 1.8s infinite"/>
-<text x="280" y="274" font-size="14" fill="#eaf4fb">Bash</text>
-<text x="470" y="36" font-size="17" font-weight="700" fill="#ffd166">provision</text>
-<rect x="470" y="76" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="486" cy="93" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 2.0s infinite"/>
-<text x="500" y="98" font-size="14" fill="#eaf4fb">Terraform</text>
-<rect x="470" y="120" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="486" cy="137" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 2.2s infinite"/>
-<text x="500" y="142" font-size="14" fill="#eaf4fb">AWS</text>
-<rect x="470" y="164" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="486" cy="181" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 2.4s infinite"/>
-<text x="500" y="186" font-size="14" fill="#eaf4fb">Docker</text>
-<rect x="470" y="208" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="486" cy="225" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 2.6s infinite"/>
-<text x="500" y="230" font-size="14" fill="#eaf4fb">Kubernetes</text>
-<rect x="470" y="252" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="486" cy="269" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 2.8s infinite"/>
-<text x="500" y="274" font-size="14" fill="#eaf4fb">Git</text>
-<text x="690" y="36" font-size="17" font-weight="700" fill="#ffd166">run</text>
-<rect x="690" y="76" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="706" cy="93" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 3.0s infinite"/>
-<text x="720" y="98" font-size="14" fill="#eaf4fb">Linux (Fedora)</text>
-<rect x="690" y="120" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="706" cy="137" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 3.2s infinite"/>
-<text x="720" y="142" font-size="14" fill="#eaf4fb">PostgreSQL</text>
-<rect x="690" y="164" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="706" cy="181" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 3.4s infinite"/>
-<text x="720" y="186" font-size="14" fill="#eaf4fb">DynamoDB</text>
-<rect x="690" y="208" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="706" cy="225" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 3.6s infinite"/>
-<text x="720" y="230" font-size="14" fill="#eaf4fb">MongoDB</text>
-<rect x="690" y="252" width="200" height="34" rx="8" fill="#0e3b5c" stroke="#2d6288"/>
-<circle cx="706" cy="269" r="4" fill="#6ee7b7" style="animation:pulse 3s ease-in-out 3.8s infinite"/>
-<text x="720" y="274" font-size="14" fill="#eaf4fb">MS SQL Server</text>
+<rect width="900" height="300" rx="14" fill="#161b22"/>
+<rect x=".5" y=".5" width="899" height="299" rx="14" fill="none" stroke="#30363d"/>
+<line x1="20" y1="54" x2="880" y2="54" stroke="#58a6ff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 8" style="animation:flow 1.6s linear infinite"/>
+<circle r="4.5" cy="0" fill="#ffd166"><animateMotion dur="5.1s" begin="0s" repeatCount="indefinite" path="M20 54 H880"/></circle>
+<circle r="4.5" cy="0" fill="#ffd166"><animateMotion dur="5.1s" begin="1.7s" repeatCount="indefinite" path="M20 54 H880"/></circle>
+<circle r="4.5" cy="0" fill="#ffd166"><animateMotion dur="5.1s" begin="3.4s" repeatCount="indefinite" path="M20 54 H880"/></circle>
+<text x="20" y="36" font-size="17" font-weight="700" fill="#ffd166">write</text>
+<rect x="20" y="76" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="36" cy="93" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 0.0s infinite"/>
+<text x="50" y="98" font-size="14" fill="#e6edf3">Python</text>
+<rect x="20" y="120" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="36" cy="137" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 0.2s infinite"/>
+<text x="50" y="142" font-size="14" fill="#e6edf3">Go</text>
+<rect x="20" y="164" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="36" cy="181" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 0.4s infinite"/>
+<text x="50" y="186" font-size="14" fill="#e6edf3">Rust</text>
+<rect x="20" y="208" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="36" cy="225" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 0.6s infinite"/>
+<text x="50" y="230" font-size="14" fill="#e6edf3">C#</text>
+<rect x="20" y="252" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="36" cy="269" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 0.8s infinite"/>
+<text x="50" y="274" font-size="14" fill="#e6edf3">TypeScript</text>
+<text x="195" y="36" font-size="17" font-weight="700" fill="#ffd166">ship</text>
+<rect x="195" y="76" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="211" cy="93" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 1.0s infinite"/>
+<text x="225" y="98" font-size="14" fill="#e6edf3">GitHub Actions</text>
+<rect x="195" y="120" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="211" cy="137" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 1.2s infinite"/>
+<text x="225" y="142" font-size="14" fill="#e6edf3">GitLab CI</text>
+<rect x="195" y="164" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="211" cy="181" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 1.4s infinite"/>
+<text x="225" y="186" font-size="14" fill="#e6edf3">Jenkins</text>
+<rect x="195" y="208" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="211" cy="225" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 1.6s infinite"/>
+<text x="225" y="230" font-size="14" fill="#e6edf3">Bash</text>
+<rect x="195" y="252" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="211" cy="269" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 1.8s infinite"/>
+<text x="225" y="274" font-size="14" fill="#e6edf3">Git</text>
+<text x="370" y="36" font-size="17" font-weight="700" fill="#ffd166">provision</text>
+<rect x="370" y="76" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="386" cy="93" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 2.0s infinite"/>
+<text x="400" y="98" font-size="14" fill="#e6edf3">Terraform</text>
+<rect x="370" y="120" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="386" cy="137" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 2.2s infinite"/>
+<text x="400" y="142" font-size="14" fill="#e6edf3">Ansible</text>
+<rect x="370" y="164" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="386" cy="181" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 2.4s infinite"/>
+<text x="400" y="186" font-size="14" fill="#e6edf3">Docker</text>
+<rect x="370" y="208" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="386" cy="225" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 2.6s infinite"/>
+<text x="400" y="230" font-size="14" fill="#e6edf3">Kubernetes</text>
+<text x="545" y="36" font-size="17" font-weight="700" fill="#ffd166">cloud</text>
+<rect x="545" y="76" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="561" cy="93" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 3.0s infinite"/>
+<text x="575" y="98" font-size="14" fill="#e6edf3">AWS</text>
+<rect x="545" y="120" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="561" cy="137" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 3.2s infinite"/>
+<text x="575" y="142" font-size="14" fill="#e6edf3">Azure</text>
+<rect x="545" y="164" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="561" cy="181" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 3.4s infinite"/>
+<text x="575" y="186" font-size="14" fill="#e6edf3">GCP</text>
+<text x="720" y="36" font-size="17" font-weight="700" fill="#ffd166">run</text>
+<rect x="720" y="76" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="736" cy="93" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 4.0s infinite"/>
+<text x="750" y="98" font-size="14" fill="#e6edf3">Linux (Fedora)</text>
+<rect x="720" y="120" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="736" cy="137" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 4.2s infinite"/>
+<text x="750" y="142" font-size="14" fill="#e6edf3">PostgreSQL</text>
+<rect x="720" y="164" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="736" cy="181" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 4.4s infinite"/>
+<text x="750" y="186" font-size="14" fill="#e6edf3">DynamoDB</text>
+<rect x="720" y="208" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="736" cy="225" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 4.6s infinite"/>
+<text x="750" y="230" font-size="14" fill="#e6edf3">MongoDB</text>
+<rect x="720" y="252" width="160" height="34" rx="8" fill="#21262d" stroke="#30363d"/>
+<circle cx="736" cy="269" r="4" fill="#56d364" style="animation:pulse 3s ease-in-out 4.8s infinite"/>
+<text x="750" y="274" font-size="14" fill="#e6edf3">MS SQL Server</text>
 </svg>

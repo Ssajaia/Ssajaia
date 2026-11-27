@@ -8,9 +8,6 @@ on:
       - "scripts/generate.py"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 concurrency:
   group: profile-assets
   cancel-in-progress: true
@@ -28,10 +25,13 @@ jobs:
       - name: Generate profile SVGs
         run: python scripts/generate.py
 
-      - name: Commit updated SVGs
-        run: |
-          git config user.name "profile-bot"
-          git config user.email "profile-bot@users.noreply.github.com"
-          git add assets/hero-dark.svg assets/hero-light.svg assets/stack-dark.svg assets/stack-light.svg
-          git diff --cached --quiet || git commit -m "chore: refresh profile SVGs"
-          git push
+      - name: Upload generated SVGs
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-svgs
+          path: |
+            assets/hero-dark.svg
+            assets/hero-light.svg
+            assets/stack-dark.svg
+            assets/stack-light.svg
+          if-no-files-found: error

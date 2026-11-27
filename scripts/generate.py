@@ -107,11 +107,12 @@ def hero(t):
 
 # -------------------------------------------------------------- stack
 STACK = [
-    ("write", ["Python", "Go", "Rust", "C#", "TypeScript"]),
+    ("write", ["Python", "Go", "Rust", "C#","C++","C","Assembly", "TypeScript","Javascript"]),
     ("ship", ["GitHub Actions", "GitLab CI", "Jenkins", "Bash", "Git"]),
     ("provision", ["Terraform", "Ansible", "Docker", "Kubernetes"]),
     ("cloud", ["AWS", "Azure", "GCP"]),
-    ("run", ["Linux (Fedora)", "PostgreSQL", "DynamoDB", "MongoDB", "MS SQL Server"]),
+    ("run", ["PostgreSQL", "DynamoDB", "MongoDB", "MS SQL Server"]),
+    ("OS", ["Arch","OpenBSD","FreeBSD","Fedora","Mint","Windows","MacOS"]),
 ]
 
 
